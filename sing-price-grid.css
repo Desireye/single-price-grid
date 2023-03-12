@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    display: grid;
+    place-items: center;
+}
+.wrapper{
+    display: grid;
+    grid-template-areas:
+        'longc longc'
+        'leftc rightc'
+    ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bottom{
+    display: flex;
+}
+.long{
+    grid-area: longc;
+    background: white;
+    width: 36rem;
+    height: 12rem;
+    padding: 6%;
+    padding-right: 9%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.278) 0px 7px 29px 0px;
+}
+.left{
+    grid-area: leftc;
+    background: hsl(179, 62%, 43%);
+    height: 15rem;
+    width: 18rem;
+    padding: 6%;
+    border-bottom-left-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.278) 0px 7px 29px 0px;
+}
+.right{
+    grid-area: rightc;
+    height: 15rem;
+    width: 18rem;
+    background: hsl(178deg 46% 51%);
+    padding: 6%;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: rgba(100, 100, 111, 0.278) 0px 7px 29px 0px;
+}
+h1{
+    font-size: 1.35rem;
+    color: hsl(179, 62%, 43%);
+}
+h2{
+    font-size: 1rem;
+    margin-top: 4%;
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 2%;
+}
+h3{
+    margin-bottom: 8%;
+    color: white;
+    font-size: 1rem;
+}
+.right p{
+    margin-bottom: 2%;
+    color: hsl(204, 43%, 93%);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.long p{
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+.left b{
+    font-size: 1.7rem;
+    color: white;
+}
+.left span{
+    color:  hsl(219, 38%, 85%);
+    font-weight: lighter;
+    margin-left: 3%;
+    vertical-align: text-top;
+    line-height: 0.7rem;
+    font-size: 0.9rem;
+}
+.left p{
+    margin-top: 5%;
+    font-size: 0.9rem;
+    color: hsl(204, 43%, 93%);
+}
+button{
+    padding: 5%;
+    width: 13.5rem;
+    background: hsl(71, 73%, 54%);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-family: 'Karla', sans-serif;
+    box-shadow: 2px 2px 15px -5px rgb(72, 69, 69);
+    margin-top: 14%;
+}
+footer{
+    bottom: 1%;
+    position: absolute;
+    color: hsl(71, 73%, 54%);
+}
+a{
+    color: hsl(71, 73%, 54%);
+    text-decoration: overline;
+}
+a:hover{
+    color:  hsl(179, 62%, 43%);
+}
+
+@media screen and (max-height: 375px){
+    .wrapper{
+        grid-template-areas: 
+        'longc'
+        'leftc'
+        'rightc'
+        ;
+    }
+    .bottom{
+        display: none;
+    }
+}
